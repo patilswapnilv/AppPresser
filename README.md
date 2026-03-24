@@ -36,6 +36,9 @@ Note: This repository is for code contributors. To use this plugin on your websi
 
 ## Changelog
 
+### 4.5.3
+* Fixed the clear cookie functionality by using the correct domain
+
 ### 4.5.2
 * Normalize the apppresser settings values
 * Tested with Wordpress 6.9

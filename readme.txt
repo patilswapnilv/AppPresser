@@ -4,7 +4,7 @@ Donate link: http://apppresser.com/
 Tags: application, iphone app, android app, mobile app, wordpress mobile
 Requires at least: 4.7.0
 Tested up to: 6.9
-Stable tag: 4.5.2
+Stable tag: 4.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ This plugin is not an app-creator in itself, it helps connect your app to WordPr
 
 
 == Changelog ==
+
+= 4.5.3 =
+* Fixed the clear cookie functionality by using the correct domain
 
 = 4.5.2 =
 * Normalize the apppresser settings values
