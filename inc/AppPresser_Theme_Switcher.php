@@ -125,7 +125,8 @@ class AppPresser_Theme_Switcher extends AppPresser {
 
 		// if not on mobile, and using v3, and not in preview, clear AP3 cookie to show desktop theme
 		if ( ! wp_is_mobile() && self::get_apv() === 3 && isset( $_COOKIE['AppPresser_Appp3'] ) && ! isset( $_COOKIE['AppPresser_Preview'] ) ) {
-			setcookie( 'AppPresser_Appp3', '', time() - 300, '/' );
+			$domain = ( $_SERVER['HTTP_HOST'] != 'localhost' ) ? $_SERVER['HTTP_HOST'] : false;
+			setcookie( 'AppPresser_Appp3', '', time() - 300, '/', $domain, 1 );
 		}
 	}
 
