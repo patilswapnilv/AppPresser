@@ -493,6 +493,14 @@ class AppPresser_WPAPI_Mods {
 			);
 		}
 
+		$continue_verification_workflow = apply_filters( 'appp_continue_registration_verification_workflow', true, $user_id, $request, $userdata );
+
+		if ( ! $continue_verification_workflow ) {
+			$success = __( 'Registration successful.', 'apppresser' );
+
+			return rest_ensure_response( $success );
+		}
+
 		update_user_meta( $user_id, 'app_unverified', true );
 
 		$mail_sent = $this->send_verification_code( $request );
